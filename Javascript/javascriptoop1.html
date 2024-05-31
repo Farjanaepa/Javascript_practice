@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advancejs</title>
+</head>
+<body>
+    <script>
+        class employee{
+            constructor(name,age,salary){
+                    this.empname =name;
+                    this.empage =age;
+                    this.empsalary =salary;
+            }
+            info(){
+                document.write(`<h3>Employee class</h3>
+                Name : ${this.empname}<br>
+                age : ${this.empage}<br>
+                salary : ${this.empsalary}<br>`)
+                
+            }
+        }
+        class manager extends employee{
+            info(){
+                let ta =1000;
+                let pa = 500;
+                let totalsalary= this.empsalary + ta + pa;
+
+
+                document.write(`<h3>Manager class</h3>
+                Name : ${this.empname}<br>
+                age : ${this.empage}<br>
+                salary : ${totalsalary}<br>`)
+                
+            }
+            
+            
+        }
+        class test extends manager{
+
+        }
+        let a = new test ("Farjana epa",25,25000);
+
+        a.info()
+    </script>
+</body>
+</html>

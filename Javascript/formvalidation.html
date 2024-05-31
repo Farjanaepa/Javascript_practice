@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #form-container{
+            background-color: antiquewhite;
+            padding: 50px;
+            text-align: center;
+        }
+        h2{
+            margin: 0px 0px 10px 0px;
+        }
+        input{
+            width: 200px;
+            margin: 10px 0px;
+            padding: 10px;
+            
+        }
+        button[type="submit"]{
+            width: 222px;
+            height: 35px;
+            background-color: brown;
+            border: 0px;
+            color: bisque;
+            margin-top: 10px;
+        }
+        .error{
+            color: crimson;
+            text-align: left;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="form-container">
+        <h2>Login</h2>
+        <form action="" onsubmit="return validateForm()">
+            <input type="text" placeholder="User name" id="username">
+                <p id="userError" class="error"></p>
+            <input type="password" placeholder="password" id="password">
+                <p id="passError" class="error"></p>
+                <input type="email" placeholder="@gmail.com" id="email">
+                <p id="emailError" class="error"></p>
+
+
+            <button type="submit" >submit</button>
+
+        </form>
+    </div>
+
+    <script>
+
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let email = document.getElementById("email");
+        let flag = 1;
+
+        function validateForm(){
+            if(username.value ==""){
+                document.getElementById("userError").innerHTML = "User name is empty";
+                flag = 0;
+
+            }else if(username.value.length <5){
+                document.getElementById("userError").innerHTML = "User name require min 5 charecter";
+                flag = 0;
+
+            }else{
+                document.getElementById("userError").innerHTML = "";
+                flag = 1;
+            }
+            if (password.value == ""){
+                document.getElementById("passError").innerHTML = "Password is empty";
+                flag = 0;
+
+
+            }else if(password.value.length <6){
+                document.getElementById("passError").innerHTML = "Password at least 6 charecter";
+                flag = 0;
+            }
+            
+            else{
+                document.getElementById("passError").innerHTML = "";
+                flag = 1;
+
+            }
+
+            if (email.value == ""){
+                document.getElementById("emailError").innerHTML = "Email is empty";
+                flag = 0;
+
+            }
+            else if(!email.value.includes  ("@gmail.com")){
+                document.getElementById("emailError").innerHTML = "Your email is incorrect";
+                flag = 0;
+            }
+            else if(email.value.includes ("@gmail.com") ){
+                document.getElementById("emailError").innerHTML = "";
+                flag = 1;
+            }
+            // else{
+            //     document.getElementById("emailError").innerHTML = "";
+            //     flag = 1;
+            // }
+
+            if(flag){
+                return true;
+            }else{
+                return false;
+
+            }
+
+        }
+    </script>
+</body>
+</html>

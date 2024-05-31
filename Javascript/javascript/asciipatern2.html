@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fullheight = 10;
+        const middleHeight = 5;
+        const name1 = "Epa";
+        let whiteSpace = " ";
+        let second = " ";
+        let last = " ";
+
+        let holder;
+        for(let index = 0; index < fullheight; index++){
+            // four column
+            if(index <= middleHeight){
+                index > 0 && (whiteSpace = whiteSpace+ " ");
+                let i = 0;
+                while(i <= fullheight - index * 2) {
+                    second = second + " ";
+                    i++;
+
+                }
+                holder = name1 + whiteSpace + name1 + second + name1 + whiteSpace + name1;
+                second = " ";
+               
+                console.log(holder);
+
+            }
+
+            // two column
+            if (index > middleHeight){
+                last = name1 + "                  "+name1;
+               
+                console.log(last);
+            }
+        }
+    </script>
+
+
+</body>
+</html>

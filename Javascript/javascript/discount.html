@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+var shopping=parseInt(prompt("please enter your amount"));
+        discount=5*shopping/100
+        discount1=10*shopping/100
+        switch(true){
+            
+            
+            case (shopping>=1 && shopping<=499):
+                document.write(shopping);
+                break;
+
+                case (shopping>=500 && shopping<=999):
+                document.write(shopping-discount);
+                break;
+
+                case (shopping>=1000):
+                document.write(shopping-discount1);
+                break;
+
+
+}
+
+
+
+    </script>
+</body>
+</html>

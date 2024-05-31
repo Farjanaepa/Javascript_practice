@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaoop</title>
+</head>
+<body>
+  <script>
+    class Car{
+        constructor(name,color,price,model){
+            this.name= name;
+            this.color =color;
+            this.price = price;
+            this.model = model;
+
+        }
+        show(){
+            return "This car name is" +" "+ this.name  +"<br> " +" "+ "It's color is"+" " + this.color +"<br> "+" "+ "This cars price is"+" "+
+            this.price +"<br> "+ "And its model is"+" "+this.model;
+        }
+
+    }
+     newCar = new Car("Audi","Black","50,00,000","G45-17")
+    a = newCar.show();
+    document.write(a);
+  </script>  
+</body>
+</html>
